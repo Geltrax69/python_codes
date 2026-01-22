@@ -187,8 +187,49 @@ import statistics
 #     print("Dischargeable not available")
 
 
-# table of a number
-num = int(input("Enter a number to print its table: "))
-for i in range(1, 11):
-    print(f"{num} x {i} = {num * i}")
+# # table of a number
+# num = int(input("Enter a number to print its table: "))
+# for i in range(1, 11):
+#     print(f"{num} x {i} = {num * i}")
     
+
+#Patten
+
+# n=5
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(i, end=" ")
+#     print()
+
+
+# n=5
+# for i in range(1, n+1):
+#     for j in range(5, i-1, -1):
+#         print(j, end=" ")
+#     print()
+
+#PALINDROME ignore case and spaces
+
+
+# word = input("Enter a word: ")
+# cleaned_word = ''.join(word.split()).lower()
+# reversed_word = cleaned_word[::-1]
+# if cleaned_word == reversed_word:
+#     print(f'"{word}" is a palindrome.')
+# else:
+#     print(f'"{word}" is not a palindrome.')
+
+# PRint the prime numnbers between 1 to n , using functions
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+n = int(input("Enter the value of n: "))
+print(f"Prime numbers between 1 and {n} are:")
+for number in range(1, n + 1):
+    if is_prime(number):
+        print(number, end=" ")
